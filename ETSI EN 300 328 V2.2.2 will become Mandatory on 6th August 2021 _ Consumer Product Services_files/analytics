@@ -1,0 +1,30 @@
+
+function piResponse() {
+		piSetCookie('visitor_id520011', '338604705', 3650);
+			piSetCookie('visitor_id520011-hash', '010078dec6b2e5580cf35df1e016018723998efed9860eb8e3ca514b8854be451e96a1066f4e7c8a13e84c6f7d24f7dc95be02e6', 3650);
+		
+		if (document.location.protocol != "https:" || (document.location.protocol == "https:" && true)) {
+		var analytics_link = document.location.protocol + "//" + "cpsglobal.bureauveritas.com/analytics?";
+		pi.tracker.visitor_id='338604705';
+
+				pi.tracker.visitor_id_sign='010078dec6b2e5580cf35df1e016018723998efed9860eb8e3ca514b8854be451e96a1066f4e7c8a13e84c6f7d24f7dc95be02e6';
+		
+				pi.tracker.campaign_id='53310';
+		
+		var variables = 'conly=true';
+		for (property in pi.tracker) {
+					variables += "&" + property + "=" + encodeURIComponent(pi.tracker[property]);
+				}
+		var headID = document.getElementsByTagName("head")[0];
+		piScriptObj[piScriptNum] = document.createElement('script');
+		piScriptObj[piScriptNum].type = 'text/javascript';
+		piScriptObj[piScriptNum].src = analytics_link + variables;
+		headID.appendChild(piScriptObj[piScriptNum]);
+		piScriptObj[piScriptNum].onload = function() { return; }
+	}
+	}
+piResponse();
+
+
+
+
